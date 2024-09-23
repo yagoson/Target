@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ContarLetraA {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário para inserir a string
+        System.out.println("Digite uma string:");
+        String input = scanner.nextLine();
+
+        // Inicializa variáveis para contar as ocorrências da letra 'a'
+        int count = 0;
+
+        // Percorre cada caractere da string
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            // Verifica se o caractere é 'a' ou 'A'
+            if (c == 'a' || c == 'A') {
+                count++;
+            }
+        }
+
+        // Verifica se a letra 'a' foi encontrada e imprime o resultado
+        if (count > 0) {
+            System.out.println("A letra 'a' (maiúscula ou minúscula) foi encontrada.");
+            System.out.println("Quantidade de vezes que a letra 'a' ocorre: " + count);
+        } else {
+            System.out.println("A letra 'a' não foi encontrada na string.");
+        }
+
+        // Fecha o scanner
+        scanner.close();
+    }
+}
